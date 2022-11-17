@@ -8,5 +8,7 @@
   width: 277px;
 }
 
-img {
+.SideBar-header {
+  display: flex;
+  justify-content: center;
 }
