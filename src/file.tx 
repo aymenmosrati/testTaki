@@ -1,0 +1,17 @@
+ <div className="SideBar-link">
+        <div className="SideBar-link-seasons">
+          <NavLink to="/seasons">الفصول</NavLink>
+        </div>
+        <div className="SideBar-link-lessons">
+          <NavLink to="/lessons">الدروس</NavLink>
+        </div>
+        <div className="SideBar-link-levels">
+          <NavLink to="/levels">المستويات</NavLink>
+        </div>
+        <div className="SideBar-link-users">
+          <NavLink to="/users">المستخدمين</NavLink>
+        </div>
+        <div className="SideBar-link-settings">
+          <NavLink to="/settings">إعدادات</NavLink>
+        </div>
+      </div>

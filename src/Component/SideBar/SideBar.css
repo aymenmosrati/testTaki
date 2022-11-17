@@ -1,0 +1,12 @@
+.SideBar {
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid #dedede;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 277px;
+}
+
+img {
+}
