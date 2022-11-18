@@ -1,49 +1,50 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/takiacademy-logo.svg";
+import logo from "../../../assets/takiacademy-logo.svg";
 import "./SideBar.css";
 
 function SideBar() {
   return (
     <div className="SideBar">
-      <div className="SideBar-header">
-        <img src={logo} className="SideBar-logo" alt="logo" />
+      <div className="SideBar-logo">
+        <img src={logo} alt="logo" />
       </div>
       <div className="SideBar-link">
         <div className="SideBar-link-seasons">
-          <NavLink to="/Seasons">
+          <NavLink to="/" className="sid-link">
             الفصول
-            <div className="SideBar-icon-menu">
+            <div className="sideBar-icon-menu sid-icon category-icon">
               <svg
                 width="27"
                 height="27"
                 viewBox="0 0 27 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="category-icon"
               >
                 <path
                   d="M7.875 12.0938H5.625C2.9025 12.0938 1.40625 10.5975 1.40625 7.875V5.625C1.40625 2.9025 2.9025 1.40625 5.625 1.40625H7.875C10.5975 1.40625 12.0938 2.9025 12.0938 5.625V7.875C12.0938 10.5975 10.5975 12.0938 7.875 12.0938ZM5.625 3.09375C3.8475 3.09375 3.09375 3.8475 3.09375 5.625V7.875C3.09375 9.6525 3.8475 10.4062 5.625 10.4062H7.875C9.6525 10.4062 10.4062 9.6525 10.4062 7.875V5.625C10.4062 3.8475 9.6525 3.09375 7.875 3.09375H5.625Z"
-                  fill="#000000"
+                  fill="black"
                 />
                 <path
                   d="M21.375 12.0938H19.125C16.4025 12.0938 14.9062 10.5975 14.9062 7.875V5.625C14.9062 2.9025 16.4025 1.40625 19.125 1.40625H21.375C24.0975 1.40625 25.5938 2.9025 25.5938 5.625V7.875C25.5938 10.5975 24.0975 12.0938 21.375 12.0938ZM19.125 3.09375C17.3475 3.09375 16.5938 3.8475 16.5938 5.625V7.875C16.5938 9.6525 17.3475 10.4062 19.125 10.4062H21.375C23.1525 10.4062 23.9062 9.6525 23.9062 7.875V5.625C23.9062 3.8475 23.1525 3.09375 21.375 3.09375H19.125Z"
-                  fill="#000000"
+                  fill="black"
                 />
                 <path
                   d="M21.375 25.5938H19.125C16.4025 25.5938 14.9062 24.0975 14.9062 21.375V19.125C14.9062 16.4025 16.4025 14.9062 19.125 14.9062H21.375C24.0975 14.9062 25.5938 16.4025 25.5938 19.125V21.375C25.5938 24.0975 24.0975 25.5938 21.375 25.5938ZM19.125 16.5938C17.3475 16.5938 16.5938 17.3475 16.5938 19.125V21.375C16.5938 23.1525 17.3475 23.9062 19.125 23.9062H21.375C23.1525 23.9062 23.9062 23.1525 23.9062 21.375V19.125C23.9062 17.3475 23.1525 16.5938 21.375 16.5938H19.125Z"
-                  fill="#000000"
+                  fill="black"
                 />
                 <path
                   d="M7.875 25.5938H5.625C2.9025 25.5938 1.40625 24.0975 1.40625 21.375V19.125C1.40625 16.4025 2.9025 14.9062 5.625 14.9062H7.875C10.5975 14.9062 12.0938 16.4025 12.0938 19.125V21.375C12.0938 24.0975 10.5975 25.5938 7.875 25.5938ZM5.625 16.5938C3.8475 16.5938 3.09375 17.3475 3.09375 19.125V21.375C3.09375 23.1525 3.8475 23.9062 5.625 23.9062H7.875C9.6525 23.9062 10.4062 23.1525 10.4062 21.375V19.125C10.4062 17.3475 9.6525 16.5938 7.875 16.5938H5.625Z"
-                  fill="#000000"
+                  fill="black"
                 />
               </svg>
             </div>
           </NavLink>
         </div>
         <div className="SideBar-link-lessons">
-          <NavLink to="/Lessons">
+          <NavLink to="/Lessons" className="sid-link">
             <span>الدروس</span>
-            <div className="SideBar-icon-message">
+            <div className="SideBar-icon-message sid-icon">
               <svg
                 width="27"
                 height="27"
@@ -85,9 +86,9 @@ function SideBar() {
           </NavLink>
         </div>
         <div className="SideBar-link-levels">
-          <NavLink to="/Levels">
+          <NavLink to="/Levels" className="sid-link">
             <span>المستويات</span>
-            <div className="SideBar-icon-task">
+            <div className="SideBar-icon-task sid-icon">
               <svg
                 width="27"
                 height="27"
@@ -135,9 +136,9 @@ function SideBar() {
           </NavLink>
         </div>
         <div className="SideBar-link-users">
-          <NavLink to="/Users">
+          <NavLink to="/Users" className="sid-link">
             <span>المستخدمين</span>
-            <div className="SideBar-icon-users">
+            <div className="SideBar-icon-users sid-icon">
               <svg
                 width="27"
                 height="27"
@@ -178,9 +179,9 @@ function SideBar() {
           </NavLink>
         </div>
         <div className="SideBar-link-settings">
-          <NavLink to="/Settings">
+          <NavLink to="/Settings" className="sid-link">
             <span>إعدادات</span>
-            <div className="SideBar-icon-setting">
+            <div className="SideBar-icon-setting sid-icon">
               <svg
                 width="27"
                 height="27"
