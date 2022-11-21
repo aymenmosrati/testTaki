@@ -1,0 +1,13 @@
+.nameclass {
+  font-weight: 700;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 18px;
+  width: 181px;
+  height: 51px;
+  color: #ffffff;
+  background: #2e6ff1;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}

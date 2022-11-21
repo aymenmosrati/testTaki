@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../../assets/takiacademy-logo.svg";
+import logo from "../../assets/takiacademy-logo.svg";
 import "./SideBar.css";
 
 function SideBar() {

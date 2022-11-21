@@ -4,14 +4,16 @@
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid #dedede;
   height: 88px;
-  width: 86%;
+  width: calc(100% - 278px);
 }
+
 .navbar-search {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .navbar-background-search {
   display: flex;
   align-items: center;
@@ -22,20 +24,49 @@
   flex-direction: row-reverse;
 }
 
-.navbar-info {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 .navbar-search-icon {
   margin-right: 12px;
   display: flex;
   align-items: center;
 }
+
 .navbar-search-input {
   width: 100%;
   background: #f5f5f5;
   border: none;
   outline: none;
   margin-right: 19px;
+}
+
+.navbar-info {
+  width: 192px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-left: 47px;
+  cursor: pointer;
+}
+
+.navbar-info-img-name {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.navbar-info-name {
+  padding-right: 9px;
+}
+
+.navbar-info-name-fullname {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.navbar-info-name-role {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: right;
+  color: #787486;
 }

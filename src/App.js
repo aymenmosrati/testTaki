@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Seasons from "./Component/Pages/Seasons";
-import Lessons from "./Component/Pages/Lessons";
-import Levels from "./Component/Pages/Levels";
-import Users from "./Component/Pages/Users";
-import Settings from "./Component/Pages/Settings";
+import Seasons from "./pages/Seasons";
+import Lessons from "./pages/Lessons";
+import Levels from "./pages/Levels";
+import Users from "./pages/Users";
+import Settings from "./pages/Settings";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 

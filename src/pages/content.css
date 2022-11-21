@@ -1,0 +1,24 @@
+.seasons-content {
+  width: calc(100% - 278px);
+  max-height: calc(100vh - 89px);
+  overflow-y: scroll;
+}
+
+.seasons-content::-webkit-scrollbar {
+  display: none;
+}
+
+.seasons-content-head {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 0 4.5%;
+  padding-top: 1.5%;
+}
+
+.seasons-content-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 0 3%;
+}
