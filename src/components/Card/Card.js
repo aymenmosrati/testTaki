@@ -1,5 +1,5 @@
 import "./Card.css";
-import img from "../assets/images5.jpg";
+import img from "../../assets/images5.jpg";
 function Card() {
   return (
     <div className="card">

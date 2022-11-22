@@ -1,5 +1,5 @@
 import "./App.css";
-import Seasons from "./pages/Seasons";
+import { Seasons } from "./pages/Seasons";
 import Lessons from "./pages/Lessons";
 import Levels from "./pages/Levels";
 import Users from "./pages/Users";

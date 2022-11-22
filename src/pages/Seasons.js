@@ -1,35 +1,34 @@
 import NavBar from "../layouts/navbar/NavBar";
 import SideBar from "../layouts/sideBar/SideBar";
-import Btn from "../component/Btn";
-import Card from "../component/Card";
+import Btn from "../components/Button/Btn";
+import Card from "../components/Card/Card";
 import "./content.css";
-import { useState } from "react";
+import Popup from "../components/Popup/Popup";
 
-function Seasons() {
-  handlepopup = (e) => {
-    e.preventDefault();
-    setOpenPopup({
-      className: "openedpopup",
-    });
-  };
-  handlepopup2 = (e) => {
-    e.preventDefault();
-    setOpenPopup({
-      className: "openedpopup",
-    });
-  };
+export const Seasons = () => {
+  //handlepopup = (e) => {
+  // e.preventDefault();
+  // setOpenPopup({
+  //  className: "openedpopup",
+  // });
+  //};
+  //handlepopup2 = (e) => {
+  //e.preventDefault();
+  // setOpenPopup({
+  //  className: "openedpopup",
+  // });
+  //};
   return (
     <div className="seasons">
+      <Popup />
       <div>
         <NavBar />
         <SideBar />
       </div>
-
       <div className="seasons-content">
         <div className="seasons-content-head">
           <h2>الفصول</h2>
-          <Btn action={handlepopup} />
-          <Btn action={handlepopup2} />
+          <Btn />
         </div>
         <div className="seasons-content-cards">
           <Card className="card" />
@@ -54,6 +53,4 @@ function Seasons() {
       </div>
     </div>
   );
-}
-
-export default Seasons;
+};
