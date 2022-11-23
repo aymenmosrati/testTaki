@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   width: 290px;
   height: 290px;
   border: 1px solid #dedede;
@@ -12,6 +13,18 @@
   width: 290px;
   height: 186px;
   border-radius: 5px 5px 0px 0px;
+}
+
+.card-icon-heart {
+  position: absolute;
+  opacity: 0.4;
+  padding-left: 250px;
+  padding-top: 15px;
+  stroke: rgb(226, 216, 216);
+}
+
+.card-icon-heart :hover {
+  fill: rgb(50, 95, 242);
 }
 
 .card-desc {

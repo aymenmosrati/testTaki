@@ -18,9 +18,10 @@ export const Seasons = () => {
   //  className: "openedpopup",
   // });
   //};
+  //  <Popup />
+
   return (
     <div className="seasons">
-      <Popup />
       <div>
         <NavBar />
         <SideBar />

@@ -4,6 +4,7 @@ import Lessons from "./pages/Lessons";
 import Levels from "./pages/Levels";
 import Users from "./pages/Users";
 import Settings from "./pages/Settings";
+import { Notfound } from "./Notfound";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/Levels" exact element={<Levels />} />
           <Route path="/Users" exact element={<Users />} />
           <Route path="/Settings" exact element={<Settings />} />
+          <Route path="*" exact element={<Notfound />} />
         </Routes>
       </div>
     </Router>
