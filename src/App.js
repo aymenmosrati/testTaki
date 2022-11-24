@@ -13,12 +13,12 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" exact element={<Seasons />} />
-          <Route path="/Lessons" exact element={<Lessons />} />
-          <Route path="/Levels" exact element={<Levels />} />
-          <Route path="/Users" exact element={<Users />} />
-          <Route path="/Settings" exact element={<Settings />} />
-          <Route path="*" exact element={<Notfound />} />
+          <Route path="/" element={<Seasons />} />
+          <Route path="/Lessons" element={<Lessons />} />
+          <Route path="/Levels" element={<Levels />} />
+          <Route path="/Users" element={<Users />} />
+          <Route path="/Settings" element={<Settings />} />
+          <Route path="*" element={<Notfound />} />
         </Routes>
       </div>
     </Router>

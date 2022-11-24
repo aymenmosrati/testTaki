@@ -4,8 +4,10 @@ import Btn from "../components/Button/Btn";
 import Card from "../components/Card/Card";
 import "./content.css";
 import Popup from "../components/Popup/Popup";
+import { stockData } from "../utilites/constant";
 
 export const Seasons = () => {
+  //const res = axios.get("/data");
   //handlepopup = (e) => {
   // e.preventDefault();
   // setOpenPopup({
@@ -19,6 +21,7 @@ export const Seasons = () => {
   // });
   //};
   //  <Popup />
+  // console.log(res);
 
   return (
     <div className="seasons">
@@ -32,24 +35,14 @@ export const Seasons = () => {
           <Btn />
         </div>
         <div className="seasons-content-cards">
-          <Card className="card" />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {stockData.map((items) => {
+            <Card
+              className="card"
+              title={items.title}
+              description={items.description}
+              img={items.img}
+            />;
+          })}
         </div>
       </div>
     </div>

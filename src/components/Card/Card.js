@@ -1,6 +1,6 @@
 import "./Card.css";
 import img from "../../assets/images5.jpg";
-function Card() {
+function Card(title, description) {
   return (
     <div className="card">
       <svg
@@ -18,10 +18,8 @@ function Card() {
       </svg>
       <img src={img} alt="" className="card-img" />
       <div className="card-desc">
-        <p className="card-title">أكملْ دورة اللغة الإنجليزية</p>
-        <p className="card-description">
-          دروس لمستويات المُبتدئ، والمُتوسط، والمُتقدِّم
-        </p>
+        <p className="card-title">{title}</p>
+        <p className="card-description">{description}</p>
       </div>
     </div>
   );

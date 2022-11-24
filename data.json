@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": 10,
+      "img": "./src/assets/images5.jpg",
+      "title": "London Central",
+      "description": "تعلم الإنكليزية مع هذه الدراما التلفزيونية المسلية",
+      "isBookmarked": false
+    },
+    {
+      "id": 20,
+      "img": "./src/assets/images3.jpg",
+      "title": "أكملْ دورة اللغة الإنجليزية",
+      "description": "دروس لمستويات المُبتدئ، والمُتوسط، والمُتقدِّم",
+      "isBookmarked": false
+    },
+    {
+      "id": 30,
+      "img": "./src/assets/images1.jpg",
+      "title": "نطق اللغة الإنكليزيّة",
+      "description": "طوّرْ مهاراتك وتحدّثْ بمزيدٍ من الثقة",
+      "isBookmarked": false
+    },
+    {
+      "id": 40,
+      "img": "./src/assets/images4.jpg",
+      "title": "العالم باللغةِ الإنكليزيّة",
+      "description": "تعلّمْ اللغة الإنكليزيّة بفضلِ فيديوهات من 'The New York Times'",
+      "isBookmarked": false
+    },
+    {
+      "id": 50,
+      "img": "./src/assets/images2.jpg",
+      "title": "أكملْ دورة اللغة الإنجليزية",
+      "description": "تعلّم مُفردات وعبارات مُهمّة لأجلِ رحلتك",
+      "isBookmarked": false
+    }
+  ]
+}
