@@ -3,14 +3,14 @@ import SideBar from "../layouts/sideBar/SideBar";
 import Btn from "../components/Button/Btn";
 import Card from "../components/Card/Card";
 import "./content.css";
-import Popup from "../components/Popup/Popup";
-import { stockData } from "../utilites/constant";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchProducts } from "../slice/products-slice";
-import { addToCart } from "../slice/cart-slice";
+import { useEffect, useState } from "react";
+import { fetchProducts, updateProducts } from "../slice/products-slice";
+import { addToCart, bookmargs } from "../slice/cart-slice";
+import axios from "axios";
 
 export const Seasons = () => {
+  const [index, setIndex] = useState(null);
   //const res = axios.get("/data");
   //handlepopup = (e) => {
   // e.preventDefault();
@@ -24,12 +24,16 @@ export const Seasons = () => {
   //  className: "openedpopup",
   // });
   //};
-  //  <Popup />
-  // console.log(res);
+  // console.log(index);
+  // const handleClick = (id, isBookmarked) => {
+  //   axios.patch(`http://localhost:3000/data/${id}`, {
+  //     isBookmarked: !isBookmarked,
+  //   });
+  //   console.log(id);
+  // };
 
   const products = useSelector((state) => state.products);
-
-  console.log(products);
+  // console.log(products);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProducts());
@@ -55,7 +59,10 @@ export const Seasons = () => {
                 description: items.description,
                 img: items.img,
               }}
-              action={() => dispatch(addToCart(items))}
+              // action={() => handleClick(items.id, items.isBookmarked)}
+              // action={() => setIndex(items.id)}
+              // action={() => dispatch(addToCart(items))}
+              action={() => dispatch(updateProducts({ items }))}
             />
           ))}
         </div>
