@@ -5,6 +5,10 @@ import Card from "../components/Card/Card";
 import "./content.css";
 import Popup from "../components/Popup/Popup";
 import { stockData } from "../utilites/constant";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchProducts } from "../slice/products-slice";
+import { addToCart } from "../slice/cart-slice";
 
 export const Seasons = () => {
   //const res = axios.get("/data");
@@ -23,6 +27,14 @@ export const Seasons = () => {
   //  <Popup />
   // console.log(res);
 
+  const products = useSelector((state) => state.products);
+
+  console.log(products);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
+
   return (
     <div className="seasons">
       <div>
@@ -35,14 +47,17 @@ export const Seasons = () => {
           <Btn />
         </div>
         <div className="seasons-content-cards">
-          {stockData.map((items) => {
+          {products.map((items) => (
             <Card
-              className="card"
-              title={items.title}
-              description={items.description}
-              img={items.img}
-            />;
-          })}
+              key={items.id}
+              data={{
+                title: items.title,
+                description: items.description,
+                img: items.img,
+              }}
+              action={() => dispatch(addToCart(items))}
+            />
+          ))}
         </div>
       </div>
     </div>

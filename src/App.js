@@ -7,6 +7,7 @@ import Settings from "./pages/Settings";
 import { Notfound } from "./Notfound";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Bookmargs } from "./pages/Bookmargs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Levels" element={<Levels />} />
           <Route path="/Users" element={<Users />} />
           <Route path="/Settings" element={<Settings />} />
+          <Route path="/Bookmargs" element={<Bookmargs />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
       </div>

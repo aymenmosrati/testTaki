@@ -43,3 +43,7 @@
 .active .category-icon path {
   fill: #2e6ff1;
 }
+
+.count-cart {
+  color: red;
+}
