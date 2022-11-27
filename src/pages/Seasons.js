@@ -4,13 +4,11 @@ import Btn from "../components/Button/Btn";
 import Card from "../components/Card/Card";
 import "./content.css";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { fetchProducts, updateProducts } from "../slice/products-slice";
-import { addToCart, bookmargs } from "../slice/cart-slice";
-import axios from "axios";
 
 export const Seasons = () => {
-  const [index, setIndex] = useState(null);
+  // const [index, setIndex] = useState(null);
   //const res = axios.get("/data");
   //handlepopup = (e) => {
   // e.preventDefault();
@@ -58,11 +56,13 @@ export const Seasons = () => {
                 title: items.title,
                 description: items.description,
                 img: items.img,
+                isBookmarked:items.isBookmarked,
+                bookmarkTrue:"bookmarkTrue",
               }}
               // action={() => handleClick(items.id, items.isBookmarked)}
               // action={() => setIndex(items.id)}
               // action={() => dispatch(addToCart(items))}
-              action={() => dispatch(updateProducts({ items }))}
+              action={() => dispatch(updateProducts(items))}
             />
           ))}
         </div>

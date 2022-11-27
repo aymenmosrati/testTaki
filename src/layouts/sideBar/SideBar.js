@@ -1,10 +1,9 @@
-import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/takiacademy-logo.svg";
 import "./SideBar.css";
 
 function SideBar() {
-  const cart = useSelector((state) => state.cart);
+  
   return (
     <div className="SideBar">
       <div className="SideBar-logo">
@@ -211,11 +210,8 @@ function SideBar() {
             </div>
           </NavLink>
           <NavLink to="/bookmargs" className="sid-link">
-            <span>Bookmargs</span>
+            <span>الفصول المفضلة</span>
             <div className="SideBar-icon-setting sid-icon">
-              {cart.length > 0 ? (
-                <span className="count-cart"> {cart.length}</span>
-              ) : null}
               <svg
                 width="24"
                 height="24"

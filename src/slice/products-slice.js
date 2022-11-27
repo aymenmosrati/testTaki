@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+// fetch all products 
 export const fetchProducts = createAsyncThunk(
   "productsSlice/fetchProducts",
   async (query, thunkAPI) => {
@@ -21,14 +22,15 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
-export const updateProducts = (items) =>
-  createAsyncThunk("productsSlice/updateProducts", async (query, thunkAPI) => {
-    try {
+// update isBookmarked true or false 
+export const updateProducts = createAsyncThunk("productsSlice/updateProducts", async (items, thunkAPI) => {
+  console.log(items.id);  
+  try {
       const res = await axios.patch(`http://localhost:3000/data/${items.id}`, {
         isBookmarked: !items.isBookmarked,
       });
       if (res.status == "200") {
-        thunkAPI.dispatch(fetchProducts);
+        thunkAPI.dispatch(fetchProducts());
       }
       throw new Error(res.statusText);
     } catch (err) {
@@ -45,6 +47,7 @@ const productsSlice = createSlice({
       state.updateBookmargs.push(action.payload);
     },
   },
+
   extraReducers: (builder) => {
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
       return action.payload;

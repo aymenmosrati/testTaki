@@ -17,15 +17,17 @@
 
 .card-icon-heart {
   position: absolute;
-  opacity: 0.4;
-  padding-left: 250px;
+  opacity: 0.6;
+  /*padding-left: 250px;
   padding-top: 15px;
-  stroke: rgb(226, 216, 216);
+  stroke: rgb(226, 216, 216); */
 }
-
-.card-icon-heart :hover {
-  fill: rgb(50, 95, 242);
+.bookmarkTrue{
+  color: red;
 }
+/* .card-icon-heart :hover {
+  fill: rgb(247, 87, 87);
+} */
 
 .card-desc {
   text-align: right;
