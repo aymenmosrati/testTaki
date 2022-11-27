@@ -1,7 +1,18 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import NavBar from "../layouts/navbar/NavBar";
 import SideBar from "../layouts/sideBar/SideBar";
+import { fetchProducts } from "../slice/products-slice";
+
 
 export const Bookmargs = () => {
+
+  const favorite = useSelector((state) => state.products)
+    const dispatch = useDispatch();
+    useEffect(() => {
+      dispatch(fetchProducts());
+    }, []);
+
   return (
     <>
       <div>
@@ -16,18 +27,17 @@ export const Bookmargs = () => {
               <th>Image</th>
               <th>Title</th>
               <th>Description</th>
-              <th>delete Cards</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Image</td>
-              <td>Title</td>
-              <td>Description</td>
-              <td>
-                <button>delete</button>
-              </td>
-            </tr>
+          {favorite.map((BookMark)=>(
+            BookMark.isBookmarked == true &&
+              <tr>
+              <td><img src={BookMark.img} alt="" width="100px" height="70px" /></td>
+              <td>{BookMark.title}</td>
+              <td>{BookMark.description}</td>
+            </tr> 
+          ))}
           </tbody>
         </table>
       </div>
